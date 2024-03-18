@@ -1,5 +1,5 @@
 {
-  "name": "knightpark.js",
+  "name": "knightpark",
   "module": "main.ts",
   "type": "module",
   "devDependencies": {
