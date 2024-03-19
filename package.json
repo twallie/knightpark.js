@@ -9,6 +9,6 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "test": "bun run src/main.ts"
+    "test": "bun run vitest"
   }
 }
