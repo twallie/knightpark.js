@@ -1,4 +1,4 @@
-exports.getParkingInfo = async () => {
+export const getParkingInfo = async () => {
   const response = await fetch(
     "https://secure.parking.ucf.edu/GarageCounter/GetOccupancy",
     {

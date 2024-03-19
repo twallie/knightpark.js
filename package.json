@@ -1,6 +1,6 @@
 {
   "name": "knightpark",
-  "module": "src/main.ts",
+  "module": "src/module.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
