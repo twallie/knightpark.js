@@ -1,5 +1,5 @@
-import { describe, it, expect } from "vitest";
-import { getGarages } from "../src/main";
+import { describe, it } from "vitest";
+import { getGarages } from "../src/parking-api-wrapper";
 
 describe("basic functions", () => {
     it("gets general parking information", async () => {
