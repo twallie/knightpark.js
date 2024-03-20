@@ -1,3 +1,3 @@
-import { getParkingInfo } from "./main";
+import { getGarages } from "./main";
 
-exports.getParkingInfo = getParkingInfo;
+exports.getParkingInfo = getGarages;

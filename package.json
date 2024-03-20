@@ -1,15 +1,16 @@
 {
-  "name": "knightpark",
-  "module": "src/module.ts",
-  "type": "module",
-  "types": "src/types.d.ts",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "scripts": {
-    "test": "bun run vitest"
-  }
+    "name": "knightpark",
+    "module": "src/module.ts",
+    "type": "module",
+    "types": "src/types.d.ts",
+    "version": "0.1.0",
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "scripts": {
+        "test": "bun run vitest"
+    }
 }
