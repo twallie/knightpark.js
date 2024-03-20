@@ -1,3 +1,3 @@
-import { getGarages } from "./parking-api-wrapper";
+import { getGarages } from "./wrapper";
 
 exports.getGarages = getGarages;
