@@ -37,5 +37,5 @@ export interface UCFParkingDataElement {
 
 export type UCFParkingAPIData = UCFParkingDataElement[];
 
-export const getGarages: () => Promise<Garage[]>;
-export const getUCFParkingAPIData: () => Promise<UCFParkingAPIData>;
+export function getGarages(): Promise<Garage[]>;
+export function getUCFParkingAPIData(): Promise<UCFParkingAPIData>;

@@ -89,19 +89,18 @@ async function getRawUCFParkingData(): Promise<RawUCFParkingAPIData> {
     return raw;
 }
 
-export const getUCFParkingAPIData: () => Promise<UCFParkingAPIData> =
-    async () => {
-        const raw = await getRawUCFParkingData();
-        const polished: UCFParkingAPIData = [];
-        for (const element of raw) {
-            const polishedElement = polishElement(element);
-            polished.push(polishedElement);
-        }
+export async function getUCFParkingAPIData(): Promise<UCFParkingAPIData> {
+    const raw = await getRawUCFParkingData();
+    const polished: UCFParkingAPIData = [];
+    for (const element of raw) {
+        const polishedElement = polishElement(element);
+        polished.push(polishedElement);
+    }
 
-        return polished;
-    };
+    return polished;
+}
 
-export const getGarages: () => Promise<Garage[]> = async () => {
+export async function getGarages(): Promise<Garage[]> {
     const parkingAPIData = await getUCFParkingAPIData();
     const garages: Garage[] = [];
     for (const element of parkingAPIData) {
@@ -122,4 +121,4 @@ export const getGarages: () => Promise<Garage[]> = async () => {
     }
 
     return garages;
-};
+}
