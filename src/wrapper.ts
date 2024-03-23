@@ -1,4 +1,4 @@
-import type { Garage } from "./types";
+import type { Garage, UCFParkingAPIData, UCFParkingDataElement } from "./types";
 
 interface RawUCFParkingDataElement {
     location: {
@@ -29,37 +29,7 @@ interface RawUCFParkingDataElement {
     };
 }
 
-interface UCFParkingDataElement {
-    location: {
-        availableCountOffset: number;
-        counts: {
-            available: number;
-            occupied: number;
-            outOfService: boolean;
-            reserved: number;
-            timestamp: string;
-            total: number;
-            vacant: number;
-            timeStampDate: string;
-            timeStampTime: string;
-        };
-        extendedProperties: {
-            entryLaneIds: null;
-            exitLaneIds: null;
-            lastContactTimestamp: string;
-            nextScheduledResetLimit: null;
-            resetTime: null;
-            resetValue: string;
-        };
-        id: number;
-        isOutOfService: boolean;
-        name: string;
-        plugin: null;
-    };
-}
-
 type RawUCFParkingAPIData = RawUCFParkingDataElement[];
-type UCFParkingAPIData = UCFParkingDataElement[];
 
 function polishElement(
     element: RawUCFParkingDataElement
@@ -119,18 +89,19 @@ async function getRawUCFParkingData(): Promise<RawUCFParkingAPIData> {
     return raw;
 }
 
-export async function getUCFParkingAPIData(): Promise<UCFParkingAPIData> {
-    const raw = await getRawUCFParkingData();
-    const polished: UCFParkingAPIData = [];
-    for (const element of raw) {
-        const polishedElement = polishElement(element);
-        polished.push(polishedElement);
-    }
+export const getUCFParkingAPIData: () => Promise<UCFParkingAPIData> =
+    async () => {
+        const raw = await getRawUCFParkingData();
+        const polished: UCFParkingAPIData = [];
+        for (const element of raw) {
+            const polishedElement = polishElement(element);
+            polished.push(polishedElement);
+        }
 
-    return polished;
-}
+        return polished;
+    };
 
-export const getGarages = async () => {
+export const getGarages: () => Promise<Garage[]> = async () => {
     const parkingAPIData = await getUCFParkingAPIData();
     const garages: Garage[] = [];
     for (const element of parkingAPIData) {
