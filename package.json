@@ -1,21 +1,21 @@
 {
-	"name": "hwrld",
-	"version": "1.0.0",
-	"description": "Can log \"hello world\" and \"goodbye world\" to the console!",
+	"name": "knightpark",
+	"version": "0.1.0",
+	"description": "a wrapper for the UCF Parking API",
 	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"files": [
-		"/dist"
-	],
-	"devDependencies": {
-		"@types/bun": "latest",
-		"bun-plugin-dts": "^0.2.1"
-	},
-	"peerDependencies": {
-		"typescript": "^5.0.0"
-	},
+	"types": "dist/index.js",
+	"files": ["/dist"],
 	"scripts": {
-		"build": "bun run build.mjs",
-		"test": "bun run vitest"
-	}
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/twallie/knightpark.js.git"
+	},
+	"author": "Thomas Wallsmith",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/twallie/knightpark.js/issues"
+	},
+	"homepage": "https://github.com/twallie/knightpark.js#readme"
 }
