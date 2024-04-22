@@ -1,0 +1,10 @@
+
+KnightPark {
+
+	- on instantiation, be fetch and organize data into
+	easy to use categories
+
+	+ refresh()
+		- refresh data and repopulate, basically whats done on instantiation	
+
+}	
