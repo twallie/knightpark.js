@@ -1,1 +1,0 @@
-export { pleaseWork } from './sanity';

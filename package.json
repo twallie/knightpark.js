@@ -1,21 +1,24 @@
 {
-	"name": "knightpark",
-	"version": "0.1.0",
-	"description": "a wrapper for the UCF Parking API",
-	"main": "dist/index.js",
-	"types": "dist/index.js",
-	"files": ["/dist"],
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/twallie/knightpark.js.git"
-	},
-	"author": "Thomas Wallsmith",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/twallie/knightpark.js/issues"
-	},
-	"homepage": "https://github.com/twallie/knightpark.js#readme"
+  "name": "knightpark",
+  "version": "0.1.0",
+  "description": "a wrapper for the UCF Parking API",
+  "main": "dist/index.js",
+  "types": "dist/index.js",
+  "files": ["/dist"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twallie/knightpark.js.git"
+  },
+  "author": "Thomas Wallsmith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twallie/knightpark.js/issues"
+  },
+  "homepage": "https://github.com/twallie/knightpark.js#readme",
+  "devDependencies": {
+    "vitest": "^1.5.0"
+  }
 }
