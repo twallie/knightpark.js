@@ -1,3 +1,4 @@
+import { Root } from "./response-type";
 
 /**
  *
@@ -12,6 +13,6 @@
 export const getParkingData = async () => {
 	const response = await fetch("https://secure.parking.ucf.edu/GarageCounter/GetOccupancy");	
 
-	const body = await response.json();
-	console.log(body);
+	const body: Root = await response.json();
+	return body;
 }

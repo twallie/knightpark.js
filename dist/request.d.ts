@@ -1,3 +1,4 @@
+import { Root } from "./response-type";
 /**
  *
  * Wraps the UCF Parking API and delivers a raw JSON representation
@@ -8,4 +9,4 @@
  * things about it just don't make very much sense at all.
  *
  */
-export declare const getParkingData: () => Promise<void>;
+export declare const getParkingData: () => Promise<Root>;

@@ -14,6 +14,6 @@ exports.getParkingData = void 0;
 const getParkingData = async () => {
     const response = await fetch("https://secure.parking.ucf.edu/GarageCounter/GetOccupancy");
     const body = await response.json();
-    console.log(body);
+    return body;
 };
 exports.getParkingData = getParkingData;
